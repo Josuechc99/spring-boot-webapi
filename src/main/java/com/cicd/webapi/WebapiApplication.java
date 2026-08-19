@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
 @SpringBootApplication
 public class WebapiApplication {
 
@@ -19,5 +21,13 @@ class HelloController {
     @GetMapping("/")
     public String hello() {
         return "Hello CI/CD World!";
+    }
+}
+
+@RestController
+class HealthController {
+    @GetMapping("/health")
+    public String health() {
+        return "Server Healthy!";
     }
 }
