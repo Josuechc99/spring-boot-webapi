@@ -31,3 +31,11 @@ class HealthController {
         return "Server Healthy!";
     }
 }
+
+@RestController
+class DateController {
+    @GetMapping("/date")
+    public String date() {
+        return "Current Server Date: " + java.time.LocalDate.now();
+    }
+}
